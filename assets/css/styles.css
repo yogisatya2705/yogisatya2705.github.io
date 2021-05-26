@@ -1,0 +1,406 @@
+:root {
+  --menu-active: #d4d4d4;
+}
+
+/* RESET STYLE */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* HEADER */
+.header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  font-size: 12pt;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header .logo-text {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.header .navigation {
+  margin-left: auto;
+}
+
+.header .navigation .navigation-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 0px;
+}
+
+.header .navigation li {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+}
+
+.header .navigation li:hover {
+  transition: 0.4s;
+  background-color: black;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header .navigation a {
+  text-decoration: none;
+}
+
+.header .navigation .active {
+  background-color: var(--menu-active);
+}
+
+
+
+.navigation-toogle {
+  display: none;
+  position: relative;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.navigation-toogle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+.navigation-toogle li:hover {
+  transition: 0.4s;
+  background-color: black;
+  color: white;
+}
+
+
+.navigation-toogle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+.navigation-toogle span {
+  display: block;
+  width: 27px;
+  height: 2px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  position: relative;
+
+  background: #000000;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+.navigation-toogle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.navigation-toogle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+.navigation-toogle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+.navigation-toogle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+.navigation-toogle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+.navigation-menu-toogle {
+  position: absolute;
+  width: 100vw;
+  margin: -100px 0 0 -25px;
+  padding: 50px 0px;
+  padding-top: 125px;
+
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.navigation-menu-toogle li {
+  padding: 10px 25px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.navigation-menu-toogle .active {
+  background-color: var(--menu-active);
+}
+
+/*
+ * And let's slide it in from the left
+ */
+.navigation-toogle input:checked~ul {
+  transform: none;
+}
+
+
+/* HOME */
+#home-with-particle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.home {
+  background-color: #232323;
+  height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.footer .footer-text {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  margin: 50px 25px 25px 25px;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.social-container .col {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .header {
+    padding: 25px 100px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .header {
+    padding: 25px 25px;
+  }
+
+  .header .navigation {
+    display: none;
+  }
+
+  .header .logo-text {
+    display: none;
+  }
+
+  .header .logo {
+    margin-left: auto;
+  }
+
+  .navigation-toogle {
+    display: block;
+  }
+}

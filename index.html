@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+  <title>Yogi Satya | Personal Website</title>
+
+  <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link type="text/css" rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+  <link type="text/css" rel="stylesheet" href="assets/css/home-card-id.css">
+  <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script type="text/javascript" src="assets/js/particles.js-2.0.0/particles.min.js"></script>
+
+  <!-- LOAD DATA -->
+  <script type="text/javascript" src="data/menu.js"></script>
+  <script type="text/javascript" src="data/social-media.js"></script>
+  <script type="text/javascript" src="data/identitas.js"></script>
+  <script type="text/javascript" src="data/module-read.js"></script>
+  <script>
+    const current_menu = "HOME";
+  </script>
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="navigation-toogle">
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul class="navigation-menu-toogle">
+        <script>
+          data_menu.forEach(element => {
+            let is_active = current_menu === element['title'] ? "active" : "";
+            document.write('<a href="' + element['url'] + '"><li class="' + is_active + '">' + element['title'] + '</li></a>')
+          });
+        </script>
+      </ul>
+    </div>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 10 10" alignment-baseline="hanging">
+      <text xml:space="preserve" style="font-style:normal;font-weight:400;font-size:12.5034px;line-height:1.25;font-family:sans-serif;fill:#000;fill-opacity:1;stroke:none;stroke-width:.312586" x="106.288" y="109.222" transform="matrix(1.02628 0 0 .9744 -109.157 -96.609)">
+        <tspan x="106.288" y="109.222" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:condensed;font-size:12.5034px;font-family:Impact;-inkscape-font-specification:'Impact, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:.312586">//</tspan>
+      </text>
+    </svg>
+
+    <span class="logo-text">
+      YOGI SATYA
+    </span>
+
+    <div class="navigation">
+      <ul class="navigation-menu">
+        <script>
+          data_menu.forEach(element => {
+            let is_active = current_menu === element['title'] ? "active" : "";
+            document.write('<a href="' + element['url'] + '"><li class="' + is_active + '">' + element['title'] + '</li></a>')
+          });
+        </script>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="content">
+    <div class="home">
+      <div id="home-with-particle"></div>
+
+      <div id="home-card-id">
+        <div class="card" style="background-color: rgba(255, 255, 255, 0);">
+          <div class="card-back">
+            <code>
+              <span class="variable">const</span><span class="function">&nbsp;aboutMe</span><span class="operator">&nbsp;=&nbsp;</span><span>{</span>
+              <script>
+                for (let key in data_identitas) {
+                  document.write('<div class="indent"> <span class="property">' + fill_space('"' + key + '"', 8) + '</span><span class="operator">:&nbsp;</span><span class="string">"' + data_identitas[key] + '"</span><span>,</span></div>');
+                }
+              </script>
+              <span>}</span>
+            </code>
+          </div>
+          <div class="card-front">
+            <code><span class="method">alert</span><span>(</span><span class="string">'Hi!'</span><span>)</span></span>
+            </code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">
+      Yogi Satya © <script>
+        document.write(new Date().getFullYear())
+      </script>
+    </div>
+
+    <div class="row no-gutters social-container">
+      <script>
+        data_social_media.forEach(element => {
+          document.write('<div class="col"><a class="social-inner" href="' + element['url'] + '" target="_blank"><span>' + element['name'] + '</span></a></div>');
+        });
+      </script>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+  particlesJS('home-with-particle', {
+    "particles": {
+      "number": {
+        "value": 289,
+        "density": {
+          "enable": true,
+          "value_area": 946.9771699587272
+        }
+      },
+      "color": {
+        "value": "#e3e3e3"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 3
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 1,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 4,
+          "size_min": 0.3,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": false,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 600
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "bubble"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "bubble"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 23.976023976023978,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 119.88011988011988,
+          "size": 5,
+          "duration": 2,
+          "opacity": 0,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 400,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</html>
