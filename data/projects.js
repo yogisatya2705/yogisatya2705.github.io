@@ -1,7 +1,7 @@
 const data_projects = [
   {
-    "data_date": "2021-05",
-    "title": "<h3>Example</h3>",
-    "content": "<h1>HELLO WORLD!!</h1>"
+    "data_date": "2022-06",
+    "title": "<h3>Sistem Informasi Sekolah</h3>",
+    "content": '<div>Manajemen data SPP, Keuangan dan Siswa</div><a href="https://sis.pratiwischool.com">Link Project</a>'
   },
 ]
