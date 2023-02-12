@@ -164,11 +164,7 @@
                   <div class="text pl-3">
                     <p><span>Website:</span>
                       <script>
-                        document.write('<a href="#" onclick="goToWebsite();">' + data_contact["website"] + '</a>')
-                        
-                        function goToWebsite() {
-                          window.location.href = data_contact["website"];
-                        }
+                        document.write('<a href="https://' + data_contact["website"] + '">' + data_contact["website"] + '</a>')
                       </script>
                     </p>
                   </div>
