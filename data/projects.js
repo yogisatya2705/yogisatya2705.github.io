@@ -1,5 +1,20 @@
 const data_projects = [
   {
+    "data_date": "2023-01",
+    "title": "<h3>Pemilihan Ketua HMJ Manajemen 2023</h3>",
+    "content": '<div>Website pemilihan ketua HMJ Manajemen 2023</div><a href="https://pemira.manajemen-undiksha.com/">Link Project</a>'
+  },
+  {
+    "data_date": "2022-12",
+    "title": "<h3>Website GLM Undiksha 2023 (Landing Page, CBT, Web Pendaftaran)</h3>",
+    "content": '<div>Website GLM Undiksha 2023 terintegrasi dengan telegram bot untuk notifikasi pendaftaran peserta</div><a href="https://glmundiksha.com/">Link Project</a>'
+  },
+  {
+    "data_date": "2022-12",
+    "title": "<h3>POS (Point Of Sale) Toko Panji Decorindo</h3>",
+    "content": '<div>Aplikasi kasir</div><a href="https://pospanji.yogisatya.my.id/">Link Project</a>'
+  },
+  {
     "data_date": "2022-06",
     "title": "<h3>Sistem Informasi Sekolah</h3>",
     "content": '<div>Manajemen data SPP, Keuangan dan Siswa</div><a href="https://sis.pratiwischool.com">Link Project</a>'
